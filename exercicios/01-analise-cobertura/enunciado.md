@@ -12,13 +12,15 @@ QA mobile falha por falta de **estratégia consciente**. Antes de automatizar, �
 
 ## Tarefa
 
-1. **Escolher 1 app** entre os 3 sugeridos abaixo (cada um analisado e validado por mim — você não vai cair em repo abandonado ou sem testes):
+1. **Escolher 1 app** entre os 5 sugeridos abaixo (cada um analisado e validado por mim — você não vai cair em repo abandonado ou sem testes):
 
-   | App | Stack | Repo |
-   |---|---|---|
-   | **DuckDuckGo Android** | Kotlin nativo | <https://github.com/duckduckgo/Android> |
-   | **Wikipedia iOS** | Swift nativo | <https://github.com/wikimedia/wikipedia-ios> |
-   | **Bluesky social-app** | React Native + Expo | <https://github.com/bluesky-social/social-app> |
+   | App | Stack | Stars | Repo |
+   |---|---|---|---|
+   | **Immich Mobile** (photo backup) | Flutter (Android+iOS) | 101k ⭐ | <https://github.com/immich-app/immich> (pasta `/mobile`) |
+   | **Bluesky social-app** | React Native + Expo | 18k ⭐ | <https://github.com/bluesky-social/social-app> |
+   | **DuckDuckGo Android** | Kotlin nativo | 4.7k ⭐ | <https://github.com/duckduckgo/Android> |
+   | **Saber** (notes/handwriting) | Flutter (Android+iOS+desktop) | 4.5k ⭐ | <https://github.com/saber-notes/saber> |
+   | **Wikipedia iOS** | Swift nativo | 3.4k ⭐ | <https://github.com/wikimedia/wikipedia-ios> |
 
    > **Pode escolher QUALQUER outro app open-source** (≥100 stars, commits últimos 6 meses) — desde que tenha **testes visíveis** no repo. Mas **fica mais difícil**:
    > - Pode cair em repo sem testes (= nada pra analisar)
@@ -53,9 +55,11 @@ QA mobile falha por falta de **estratégia consciente**. Antes de automatizar, �
 
 | App | Onde baixar |
 |---|---|
-| DuckDuckGo Android | <https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android> |
-| Wikipedia iOS | <https://apps.apple.com/app/wikipedia/id324715238> |
+| Immich | iOS: <https://apps.apple.com/app/immich/id1613945652> · Android: <https://play.google.com/store/apps/details?id=app.alextran.immich> |
 | Bluesky | iOS: <https://apps.apple.com/app/bluesky-social/id6444370199> · Android: <https://play.google.com/store/apps/details?id=xyz.blueskyweb.app> |
+| DuckDuckGo Android | <https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android> |
+| Saber | iOS: <https://apps.apple.com/app/saber/id1671523739> · Android: <https://play.google.com/store/apps/details?id=com.adilhanney.saber> |
+| Wikipedia iOS | <https://apps.apple.com/app/wikipedia/id324715238> |
 
 > 5min usando o app já dá contexto pra você raciocinar: "esse fluxo de criar conta… deveria ter teste E2E? Tem?".
 
@@ -64,7 +68,7 @@ QA mobile falha por falta de **estratégia consciente**. Antes de automatizar, �
 Em vez de só ler no GitHub via browser, **clone o repo** e abra com sua ferramenta de IA preferida. **A IA acelera muito a análise** — você pergunta e ela varre o repo por você.
 
 ```bash
-git clone https://github.com/duckduckgo/Android.git
+git clone https://github.com/duckduckgo/Android.git    # ou outro dos 4 sugeridos
 cd Android
 # abre com seu IDE / agente IA
 ```
