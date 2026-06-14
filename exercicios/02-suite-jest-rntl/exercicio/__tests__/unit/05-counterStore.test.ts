@@ -1,12 +1,12 @@
-// __tests__/counterStore.test.ts
+// __tests__/unit/05-counterStore.test.ts
 //
-// HANDS-ON — escreva os testes da counterStore.
+// HANDS-ON — escreva os testes da counterStore (vocês sozinhos).
 //
 // Mesmo padrão da favoritesStore: resete o estado entre testes.
 //   useCounterStore.getState().increment()
 //   useCounterStore.getState().count   // → lê o valor atual
 
-import { useCounterStore } from '../src/store/counterStore';
+import { useCounterStore } from '@/store/counterStore';
 
 beforeEach(() => {
   useCounterStore.setState({ count: 0 });
@@ -18,21 +18,21 @@ const s = () => useCounterStore.getState();
 // Os 3 são FÁCEIS: a ação já está escrita — complete só o expect (começam vermelhos → verde).
 
 describe('counterStore', () => {
-  it('increment soma 1 ao count', () => {
+  it('1. increment soma 1 ao count', () => {
     // Act
     s().increment();
     // Assert — complete:
     expect(s().count).toBe(/* TODO */);
   });
 
-  it('decrement subtrai 1 do count', () => {
+  it('2. decrement subtrai 1 do count', () => {
     // Act
     s().decrement();
     // Assert — complete:
     expect(s().count).toBe(/* TODO */);
   });
 
-  it('reset volta o count pra 0', () => {
+  it('3. reset volta o count pra 0', () => {
     // Arrange
     s().increment();
     s().increment();

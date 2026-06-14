@@ -1,4 +1,4 @@
-// __tests__/popularMovies.test.ts
+// __tests__/unit/06-popularMovies.test.ts
 //
 // BÔNUS (camada data) — testar fetchPopularMovies isolando a dependência de rede.
 //
@@ -8,8 +8,8 @@
 //   const mockedGet = api.get as jest.Mock;
 //   mockedGet.mockResolvedValue({ data: { page: 1, results: [], total_pages: 1, total_results: 0 } });
 
-import { fetchPopularMovies } from '../src/queries/movies/get-popular-movies';
-import { api } from '../src/services/api';
+import { fetchPopularMovies } from '@/queries/movies/get-popular-movies';
+import { api } from '@/services/api';
 
 jest.mock('@/services/api');
 const mockedGet = api.get as jest.Mock;
@@ -19,6 +19,6 @@ beforeEach(() => {
 });
 
 describe('fetchPopularMovies', () => {
-  it.todo('chama /movie/popular com a page informada');
-  it.todo('devolve o data da resposta');
+  it.todo('1. chama /movie/popular com a page informada');
+  it.todo('2. devolve o data da resposta');
 });

@@ -25,7 +25,7 @@ O app-alvo é o **mesmo app TMDB da disciplina de Arquitetura** (já implementad
 # 1. Fork do repo público no GitHub
 # 2. Clone o SEU fork
 git clone https://github.com/SEU-USUARIO/puc-iec-testes-aplicacoes-mobile.git
-cd puc-iec-testes-aplicacoes-mobile/exercicios/02-setup-suite-unitaria/exercicio
+cd puc-iec-testes-aplicacoes-mobile/exercicios/02-suite-jest-rntl/exercicio
 npm install
 npm test     # posterUrl já passa verde (3 testes). O resto é seu.
 ```
@@ -36,9 +36,9 @@ npm test     # posterUrl já passa verde (3 testes). O resto é seu.
 
 ## Parte A — Suíte Unitária (10 pts) · escrever testes em `__tests__/`
 
-O exercício já tem **1 exemplo resolvido** (`posterUrl.test.ts`) — use de modelo. Os outros arquivos têm `it.todo` marcando o que falta.
+O exercício já tem **1 exemplo resolvido** (`unit/01-posterUrl.test.ts`) — use de modelo. Os outros arquivos têm `it.todo` marcando o que falta.
 
-### 1. `favoritesStore.test.ts` — Zustand (6 testes)
+### 1. `unit/03-favoritesStore.test.ts` — Zustand (6 testes)
 
 Store em `src/store/favoritesStore.ts`. Cubra:
 - `add(id)` adiciona o id
@@ -50,7 +50,7 @@ Store em `src/store/favoritesStore.ts`. Cubra:
 
 > Store é singleton — resete entre testes com `useFavoritesStore.setState({ ids: [] })` no `beforeEach` (já está no scaffold). Acesse com `useFavoritesStore.getState()`.
 
-### 2. `MovieCard.test.tsx` — teste de tela (RNTL) ⭐
+### 2. `unit/04-MovieCard.test.tsx` — teste de tela (RNTL) ⭐
 
 Componente em `src/components/MovieCard.tsx`. É o teste mais "cara de QA" — valida o que o usuário **vê** e **faz**:
 - renderiza o **título** do filme (`screen.getByText`)
@@ -59,11 +59,11 @@ Componente em `src/components/MovieCard.tsx`. É o teste mais "cara de QA" — v
 
 > MovieCard usa `useNavigation()` — mocke o hook (não há `NavigationContainer` no teste). O scaffold já traz o mock pronto.
 
-### 3. `counterStore.test.ts` — Zustand (3 testes)
+### 3. `unit/05-counterStore.test.ts` — Zustand (3 testes)
 
 `increment` soma 1 · `decrement` subtrai 1 · `reset` zera.
 
-### 4. `api.test.ts` — função pura da camada data (5 testes)
+### 4. `unit/02-isTokenError.test.ts` — função pura da camada data (5 testes)
 
 `isTokenError(err)` em `src/services/api.ts`:
 - `true` pra `response.status === 401`
@@ -87,7 +87,7 @@ Aqui você testa **fluxo entre componentes** (Bloco 2): a lista busca dados (API
 
 > Por que uma versão separada em `src/integration/`? O `MovieList`/`MovieCard` da Parte A são stubs que você completaria implementando features. Pra focar em **teste de integração** (não em implementar app), a Parte B traz as telas prontas e conectadas.
 
-**Pontua só a entrega:** `__tests__/integration/movieFlow.integration.test.tsx` (3 cenários). Os outros dois arquivos são **prática** (não pontuam), mas faça-os primeiro — são o aquecimento.
+**Pontua só a entrega:** `__tests__/integration/03-movieFlow.integration.test.tsx` (3 cenários). Os outros dois arquivos são **prática** (não pontuam), mas faça-os primeiro — são o aquecimento.
 
 | Arquivo | O que cobrir | Pontua? |
 |---|---|---|
@@ -114,7 +114,7 @@ Aqui você testa **fluxo entre componentes** (Bloco 2): a lista busca dados (API
 **Total: 15 pts** (Parte A: 10 · Parte B: 5)
 
 > 🎁 **Bônus** (arredondamento):
-> - `popularMovies.test.ts` — `fetchPopularMovies` com `jest.mock('@/services/api')` (+1)
+> - `unit/06-popularMovies.test.ts` — `fetchPopularMovies` com `jest.mock('@/services/api')` (+1)
 > - CI GitHub Actions verde no fork (workflow já vem pronto em `.github/workflows/test.yml`)
 > - Testes parametrizados (`it.each`)
 
@@ -132,7 +132,7 @@ Aqui você testa **fluxo entre componentes** (Bloco 2): a lista busca dados (API
 
 1. Fork do repo público: <https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile>
 2. Branch `entrega/atividade-2-<seu-nome>` no seu fork
-3. Trabalhe direto em `exercicios/02-setup-suite-unitaria/exercicio/__tests__/` no SEU fork
+3. Trabalhe direto em `exercicios/02-suite-jest-rntl/exercicio/__tests__/` no SEU fork
 4. Commit + push pro seu fork (**NÃO comite `node_modules/` nem `coverage/`** — `.gitignore` já cuida)
 5. Submeter no Canvas com link do commit (ou PR)
 
@@ -146,7 +146,7 @@ Aqui você testa **fluxo entre componentes** (Bloco 2): a lista busca dados (API
 
 ## Material de apoio (todos no GitHub público)
 
-- **[exercício (app + scaffolds)](https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile/tree/main/exercicios/02-setup-suite-unitaria/exercicio)** — README com tasks
-- **[guia-passo-a-passo.md](https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile/blob/main/exercicios/02-setup-suite-unitaria/guia-passo-a-passo.md)** — comandos + troubleshooting
-- **[template-relatorio.md](https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile/blob/main/exercicios/02-setup-suite-unitaria/template-relatorio.md)** — README modelo
+- **[exercício (app + scaffolds)](https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile/tree/main/exercicios/02-suite-jest-rntl/exercicio)** — README com tasks
+- **[guia-passo-a-passo.md](https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile/blob/main/exercicios/02-suite-jest-rntl/guia-passo-a-passo.md)** — comandos + troubleshooting
+- **[template-relatorio.md](https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile/blob/main/exercicios/02-suite-jest-rntl/template-relatorio.md)** — README modelo
 - **[Slide aula 3 — Jest/RNTL](https://github.com/jacksonsmith/puc-iec-testes-aplicacoes-mobile/blob/main/slides/aula-03/aula-03-jest-rntl.pdf)**

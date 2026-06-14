@@ -1,4 +1,4 @@
-// __tests__/MovieCard.test.tsx
+// __tests__/unit/04-MovieCard.test.tsx
 //
 // TESTE DE TELA (React Native Testing Library) — o coração do QA mobile.
 // Testa o que o USUÁRIO vê e faz, não a implementação.
@@ -13,7 +13,7 @@
 // Queries RNTL: screen.getByText(...) · fireEvent.press(...) · expect(...).toBeTruthy()
 
 import { render, screen, fireEvent } from '@testing-library/react-native';
-import MovieCard from '../src/components/MovieCard';
+import MovieCard from '@/components/MovieCard';
 
 const mockNavigate = jest.fn();
 jest.mock('@react-navigation/native', () => ({
@@ -33,12 +33,12 @@ beforeEach(() => mockNavigate.mockClear());
 
 describe('MovieCard', () => {
   // Dica: depois do render → expect(screen.getByText('Matrix')).toBeTruthy();
-  it.todo('renderiza o título do filme');
+  it.todo('1. renderiza o título do filme');
 
   // Dica: a nota aparece como '⭐ 8.7' (vote_average.toFixed(1)) → screen.getByText('⭐ 8.7').
-  it.todo('renderiza a nota (⭐ 8.7)');
+  it.todo('2. renderiza a nota (⭐ 8.7)');
 
   // Dica: fireEvent.press(screen.getByText('Matrix'));
   //   expect(mockNavigate).toHaveBeenCalledWith('Detail', { id: 42, title: 'Matrix' });
-  it.todo('navega pro detalhe ao tocar no card');
+  it.todo('3. navega pro detalhe ao tocar no card');
 });

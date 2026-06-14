@@ -1,11 +1,10 @@
-// __tests__/integration/movieFlow.integration.test.tsx
+// __tests__/integration/03-movieFlow.integration.test.tsx
 //
 // ⭐ ENTREGA AVALIATIVA — Atividade 2, Parte B (5 pts).
 //
 // Testa o FLUXO entre componentes da versão implementada (src/integration/):
 // a lista busca dados (API mockada) e favoritar um card reflete no contador
-// do header. É integração de verdade: store + query + componentes juntos,
-// sem simulador.
+// do header. Integração de verdade: store + query + componentes juntos, sem simulador.
 //
 // O setup abaixo (mock da API, dados falsos, wrapper com QueryClientProvider)
 // JÁ ESTÁ PRONTO. Você só escreve os 3 it() — troque cada it.todo por it(...).
@@ -58,11 +57,11 @@ beforeEach(() => {
 
 describe('Fluxo de integração — lista + favoritos (ENTREGA Parte B)', () => {
   // 2 pts — render(renderApp()); depois findByText de 'Matrix' e 'Inception'.
-  it.todo('exibe a lista de filmes retornada pela API mockada');
+  it.todo('1. exibe a lista de filmes retornada pela API mockada');
 
   // 2 pts — após carregar, contador começa em '0'; press no heart-1 → '1'.
-  it.todo('favoritar um card incrementa o contador do header (♥ 1)');
+  it.todo('2. favoritar um card incrementa o contador do header (♥ 1)');
 
   // 1 pt — favoritar e depois desfavoritar o mesmo card → contador volta a '0'.
-  it.todo('desfavoritar volta o contador a 0');
+  it.todo('3. desfavoritar volta o contador a 0');
 });

@@ -14,7 +14,7 @@ Sistema de auto-correção das atividades práticas via GitHub Actions. Aluno fa
 | A4 | Performance + Security | 10 | manual (relatório) | — |
 | PF | Projeto Final | 50 | manual | — |
 
-> **A2 — como é avaliada:** a entrega é fork editando `exercicios/02-setup-suite-unitaria/exercicio/__tests__/` **in-place** (não `aluno-<user>/`). O gate real é o **CI `test.yml`** do próprio exercício, que roda os testes e exige **Parte A** (≥14 unit verdes + cobertura store/utils) **e Parte B** (os 3 testes de `movieFlow.integration.test.tsx` verdes). O `unit-coverage.ts` é um validator **estrutural** (confere sinais sem rodar testes) — útil pra pontuar a rubrica, mas ainda não plugado num workflow.
+> **A2 — como é avaliada:** a entrega é fork editando `exercicios/02-suite-jest-rntl/exercicio/__tests__/` **in-place** (não `aluno-<user>/`). O gate real é o **CI `test.yml`** do próprio exercício, que roda os testes e exige **Parte A** (≥14 unit verdes + cobertura store/utils) **e Parte B** (os 3 testes de `movieFlow.integration.test.tsx` verdes). O `unit-coverage.ts` é um validator **estrutural** (confere sinais sem rodar testes) — útil pra pontuar a rubrica, mas ainda não plugado num workflow.
 
 ## Como funciona
 

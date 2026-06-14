@@ -9,7 +9,7 @@
 ```bash
 # Fork no GitHub, depois clone o SEU fork:
 git clone https://github.com/SEU-USUARIO/puc-iec-testes-aplicacoes-mobile.git
-cd puc-iec-testes-aplicacoes-mobile/exercicios/02-setup-suite-unitaria/exercicio
+cd puc-iec-testes-aplicacoes-mobile/exercicios/02-suite-jest-rntl/exercicio
 
 node -v        # precisa v22.x  (use nvm: nvm install 22 && nvm use 22)
 npm install    # ~2-3min na primeira vez
@@ -167,7 +167,7 @@ it('chama /movie/popular e devolve data', async () => {
 
 ```bash
 git checkout -b entrega/atividade-2-seu-nome
-git add exercicios/02-setup-suite-unitaria/exercicio/__tests__
+git add exercicios/02-suite-jest-rntl/exercicio/__tests__
 git commit -m "test(atv2): suite unitaria favoritesStore + counterStore + api"
 git push origin entrega/atividade-2-seu-nome
 ```

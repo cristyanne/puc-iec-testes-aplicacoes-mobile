@@ -41,17 +41,18 @@ src/
 ├── hooks/useFavorites.ts     ← Parte B: alvo do renderHook
 └── integration/              ← Parte B: telas conectadas (lista, card, navegação)
 
-__tests__/                    ← SUA ENTREGA (Jest + RNTL)
-├── posterUrl.test.ts          ← EXEMPLO RESOLVIDO (modelo)
-├── MovieCard.test.tsx         ← it.todo — teste de tela ⭐
-├── favoritesStore.test.ts     ← it.todo
-├── counterStore.test.ts       ← it.todo
-├── api.test.ts                ← it.todo
-├── popularMovies.test.ts      ← it.todo — bônus (mock da api)
+__tests__/                    ← SUA ENTREGA — numerados na ordem de fazer
+├── unit/                     ← Parte A
+│   ├── 01-posterUrl.test.ts            ← EXEMPLO RESOLVIDO (comece aqui)
+│   ├── 02-isTokenError.test.ts         ← it.todo
+│   ├── 03-favoritesStore.test.ts       ← it.todo
+│   ├── 04-MovieCard.test.tsx           ← it.todo — teste de tela ⭐
+│   ├── 05-counterStore.test.ts         ← it.todo
+│   └── 06-popularMovies.test.ts        ← it.todo — bônus (mock da api)
 └── integration/              ← Parte B
-    ├── useFavorites.test.ts            ← it.todo — prática (renderHook)
-    ├── navigation.test.tsx             ← it.todo — prática (tap → Detail)
-    └── movieFlow.integration.test.tsx  ← it.todo — ENTREGA Parte B ⭐
+    ├── 01-useFavorites.test.ts            ← it.todo — prática (renderHook)
+    ├── 02-navigation.test.tsx             ← it.todo — prática (tap → Detail)
+    └── 03-movieFlow.integration.test.tsx  ← it.todo — ENTREGA Parte B ⭐
 ```
 
 ---
@@ -60,7 +61,7 @@ __tests__/                    ← SUA ENTREGA (Jest + RNTL)
 
 ```bash
 git clone https://github.com/SEU-USUARIO/puc-iec-testes-aplicacoes-mobile.git
-cd puc-iec-testes-aplicacoes-mobile/exercicios/02-setup-suite-unitaria/exercicio
+cd puc-iec-testes-aplicacoes-mobile/exercicios/02-suite-jest-rntl/exercicio
 npm install
 npm test          # 3 verdes (posterUrl) + alguns vermelhos (complete o expect) + desafios (todo)
 ```
@@ -86,21 +87,21 @@ npm run test:mutation  # mutation testing (Stryker) — RODE depois de resolver 
 
 | # | Onde | O que fazer |
 |---|---|---|
-| TASK 1 | `__tests__/posterUrl.test.ts` | Leia — é o **modelo resolvido** |
-| TASK 2 | `__tests__/favoritesStore.test.ts` | Escreva 6 testes (add/remove/toggle/isFavorite/clear) |
-| TASK 3 ⭐ | `__tests__/MovieCard.test.tsx` | **Teste de tela (RNTL):** render título/nota + `press` navega |
-| TASK 4 | `__tests__/api.test.ts` | Escreva 5 testes de `isTokenError` |
-| TASK 5 | `__tests__/counterStore.test.ts` | Escreva 3 testes (increment/decrement/reset) |
+| TASK 1 | `__tests__/unit/01-posterUrl.test.ts` | Leia — é o **modelo resolvido** |
+| TASK 2 | `__tests__/unit/03-favoritesStore.test.ts` | Escreva 6 testes (add/remove/toggle/isFavorite/clear) |
+| TASK 3 ⭐ | `__tests__/unit/04-MovieCard.test.tsx` | **Teste de tela (RNTL):** render título/nota + `press` navega |
+| TASK 4 | `__tests__/unit/02-isTokenError.test.ts` | Escreva 5 testes de `isTokenError` |
+| TASK 5 | `__tests__/unit/05-counterStore.test.ts` | Escreva 3 testes (increment/decrement/reset) |
 | TASK 6 | — | Atinja **cobertura ≥ 70%** em `src/store` e `src/utils` |
-| TASK 7 (bônus) | `__tests__/popularMovies.test.ts` | `fetchPopularMovies` com `jest.mock('@/services/api')` |
+| TASK 7 (bônus) | `__tests__/unit/06-popularMovies.test.ts` | `fetchPopularMovies` com `jest.mock('@/services/api')` |
 
 **Parte B — Integração (5 pts):** o setup (mock + wrapper) já vem pronto — você só escreve os `it()`.
 
 | # | Onde | O que fazer |
 |---|---|---|
-| TASK 8 (prática) | `__tests__/integration/useFavorites.test.ts` | `renderHook` — toggle isolado |
-| TASK 9 (prática) | `__tests__/integration/navigation.test.tsx` | `AppNavigator` — tap no card → Detail |
-| **TASK 10 ⭐ (entrega)** | `__tests__/integration/movieFlow.integration.test.tsx` | **lista aparece + favoritar `♥ 1` + desfavoritar `♥ 0`** |
+| TASK 8 (prática) | `__tests__/integration/01-useFavorites.test.ts` | `renderHook` — toggle isolado |
+| TASK 9 (prática) | `__tests__/integration/02-navigation.test.tsx` | `AppNavigator` — tap no card → Detail |
+| **TASK 10 ⭐ (entrega)** | `__tests__/integration/03-movieFlow.integration.test.tsx` | **lista aparece + favoritar `♥ 1` + desfavoritar `♥ 0`** |
 
 ```bash
 grep -rn "it.todo\|TODO \[TASK" __tests__/   # ver o que falta

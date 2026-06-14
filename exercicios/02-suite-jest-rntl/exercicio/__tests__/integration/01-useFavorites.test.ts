@@ -1,4 +1,4 @@
-// __tests__/integration/useFavorites.test.ts
+// __tests__/integration/01-useFavorites.test.ts
 //
 // PRÁTICA (não pontua) — aquecimento do Bloco 2.
 // `renderHook` roda um hook no ambiente React SEM renderizar tela.
@@ -17,9 +17,9 @@ import { useFavoritesStore } from '@/store/favoritesStore';
 beforeEach(() => useFavoritesStore.setState({ ids: [] }));
 
 describe('useFavorites (renderHook)', () => {
-  it.todo('começa sem favoritos (count === 0)');
+  it.todo('1. começa sem favoritos (count === 0)');
 
-  it.todo('toggle adiciona e depois remove — count volta a 0');
+  it.todo('2. toggle adiciona e depois remove — count volta a 0');
 
-  it.todo('isFavorite reflete o estado após add(id)');
+  it.todo('3. isFavorite reflete o estado após add(id)');
 });

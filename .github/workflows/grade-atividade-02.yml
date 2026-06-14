@@ -18,7 +18,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       # Descobre a pasta de entrega a partir dos arquivos do PR.
-      # Qualquer pasta sob exercicios/02-setup-suite-unitaria/ (exceto starter/exemplo-resolvido).
+      # Qualquer pasta sob exercicios/02-suite-jest-rntl/ (exceto starter/exemplo-resolvido).
       - id: discover
         uses: actions/github-script@v7
         with:
@@ -29,11 +29,11 @@ jobs:
               pull_number: context.issue.number,
               per_page: 100,
             });
-            const re = /^exercicios\/02-setup-suite-unitaria\/(?!starter\/|exemplo-resolvido\/)([^/]+)\//;
+            const re = /^exercicios\/02-suite-jest-rntl\/(?!starter\/|exemplo-resolvido\/)([^/]+)\//;
             const dirs = new Set();
             for (const f of files) {
               const m = f.filename.match(re);
-              if (m) dirs.add(`exercicios/02-setup-suite-unitaria/${m[1]}`);
+              if (m) dirs.add(`exercicios/02-suite-jest-rntl/${m[1]}`);
             }
             const list = [...dirs];
             if (list.length === 0) {

@@ -1,4 +1,4 @@
-// __tests__/integration/navigation.test.tsx
+// __tests__/integration/02-navigation.test.tsx
 //
 // PRÁTICA (não pontua) — integração de navegação.
 // Renderiza o app inteiro (AppNavigator) e verifica que tocar num card
@@ -46,5 +46,5 @@ beforeEach(() => {
 });
 
 describe('Navegação (integração)', () => {
-  it.todo('tap no card de Matrix navega pra tela de detalhe');
+  it.todo('1. tap no card de Matrix navega pra tela de detalhe');
 });

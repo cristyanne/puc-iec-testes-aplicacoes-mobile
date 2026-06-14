@@ -7,7 +7,7 @@ Atividades das 6 aulas. **Sem gabaritos** — entregas avaliadas no Canvas.
 | # | Aula | Atividade | Pontos | Prazo |
 |---|------|-----------|--------|-------|
 | 1 | 1 | [Análise de Cobertura](./01-analise-cobertura/) ou [Casos de Teste Funcionais](./01-casos-de-teste-funcionais/) | 15 | 27/05/2026 |
-| 2 | 3 | [Setup + Suíte Unitária](./02-setup-suite-unitaria/) | 10 | 21/06/2026 |
+| 2 | 3 | [Setup + Suíte Unitária](./02-suite-jest-rntl/) | 10 | 21/06/2026 |
 | 3 | 4 | [Suíte Maestro E2E](./03-maestro-e2e/) | 15 | 28/06/2026 |
 | 4 | 5 | Performance + Security Report | 10 | 08/07/2026 |
 | **PF** | 6 | **Projeto Final** | **50** | Apresentação 09/07/2026 |

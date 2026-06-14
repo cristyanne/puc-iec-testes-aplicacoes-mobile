@@ -1,4 +1,4 @@
-// __tests__/favoritesStore.test.ts
+// __tests__/unit/03-favoritesStore.test.ts
 //
 // HANDS-ON / ATIVIDADE 2 — escreva os testes da favoritesStore.
 //
@@ -7,10 +7,10 @@
 //
 // Acesse estado e actions com useFavoritesStore.getState():
 //   useFavoritesStore.getState().add(1)
-//   useFavoritesStore.getState().ids        // → [1]
+//   useFavoritesStore.getState().ids            // → [1]
 //   useFavoritesStore.getState().isFavorite(1)  // → true
 
-import { useFavoritesStore } from '../src/store/favoritesStore';
+import { useFavoritesStore } from '@/store/favoritesStore';
 
 beforeEach(() => {
   useFavoritesStore.setState({ ids: [] });
@@ -19,19 +19,18 @@ beforeEach(() => {
 // Atalho pra ler estado e actions fora de componente React:
 const s = () => useFavoritesStore.getState();
 
-// FÁCEIS: a preparação (Arrange) e a ação (Act) já estão escritas — você completa SÓ o expect.
-//         Começam VERMELHOS; preencha o valor esperado pra virar verde.
-// 🔴 DESAFIOS: ainda it.todo — escreva o teste inteiro a partir da dica.
+// FÁCEIS (1-4): Arrange e Act já escritos — complete SÓ o expect (começam vermelhos → verde).
+// 🔴 DESAFIOS (5-6): ainda it.todo — escreva o teste inteiro a partir da dica.
 
 describe('favoritesStore', () => {
-  it('add(id) adiciona o id à lista', () => {
+  it('1. add(id) adiciona o id à lista', () => {
     // Act
     s().add(1);
     // Assert — complete:
     expect(s().ids).toEqual(/* TODO: qual array? */);
   });
 
-  it('remove(id) tira o id da lista', () => {
+  it('2. remove(id) tira o id da lista', () => {
     // Arrange
     s().add(1);
     // Act
@@ -40,7 +39,7 @@ describe('favoritesStore', () => {
     expect(s().ids).toEqual(/* TODO */);
   });
 
-  it('isFavorite(id) reflete o estado atual', () => {
+  it('3. isFavorite(id) reflete o estado atual', () => {
     // Arrange
     s().add(1);
     // Assert — complete (true ou false?):
@@ -48,7 +47,7 @@ describe('favoritesStore', () => {
     expect(s().isFavorite(99)).toBe(/* TODO */);
   });
 
-  it('clear() esvazia a lista', () => {
+  it('4. clear() esvazia a lista', () => {
     // Arrange
     s().add(1);
     s().add(2);
@@ -60,9 +59,9 @@ describe('favoritesStore', () => {
 
   // 🔴 DESAFIO: chamar add(1) DUAS vezes não pode duplicar (ids continua [1]).
   //    Escreva Act + Assert do zero.
-  it.todo('add(id) não duplica id já existente');
+  it.todo('5. add(id) não duplica id já existente');
 
   // 🔴 DESAFIO: toggle(1) na lista vazia ADICIONA; chamar toggle(1) de novo REMOVE.
   //    Faça as 2 verificações (após o 1º toggle = [1]; após o 2º = []).
-  it.todo('toggle(id) adiciona se ausente e remove se presente');
+  it.todo('6. toggle(id) adiciona se ausente e remove se presente');
 });
